@@ -687,20 +687,18 @@ export function groupWith<T>(fn: (x: T, y: T) => boolean, list: string): string[
 /**
  * Returns true if the first parameter is greater than the second.
  */
-export function gt(__: Placeholder, b: number): (a: number) => boolean;
-export function gt(__: Placeholder): (b: number, a: number) => boolean;
-export function gt(a: number, b: number): boolean;
-export function gt(a: string, b: string): boolean;
-export function gt(a: number): (b: number) => boolean;
+export function gt<T extends Ord>(__: Placeholder, b: T): (a: T) => boolean;
+export function gt<T extends Ord>(__: Placeholder): (b: T, a: T) => boolean;
+export function gt<T extends Ord>(a: T, b: T): boolean;
+export function gt<T extends Ord>(a: T): (b: T) => boolean;
 
 /**
  * Returns true if the first parameter is greater than or equal to the second.
  */
-export function gte(__: Placeholder, b: number): (a: number) => boolean;
-export function gte(__: Placeholder): (b: number, a: number) => boolean;
-export function gte(a: number, b: number): boolean;
-export function gte(a: string, b: string): boolean;
-export function gte(a: number): (b: number) => boolean;
+export function gte<T extends Ord>(__: Placeholder, b: T): (a: T) => boolean;
+export function gte<T extends Ord>(__: Placeholder): (b: T, a: T) => boolean;
+export function gte<T extends Ord>(a: T, b: T): boolean;
+export function gte<T extends Ord>(a: T): (b: T) => boolean;
 
 /**
  * Returns whether or not an object has an own property with the specified name.
@@ -1009,20 +1007,18 @@ export function liftN(n: number, fn: ((...a: readonly any[]) => any), ...args: r
 /**
  * Returns true if the first parameter is less than the second.
  */
-export function lt(__: Placeholder, b: number): (a: number) => boolean;
-export function lt(__: Placeholder): (b: number, a: number) => boolean;
-export function lt(a: number, b: number): boolean;
-export function lt(a: string, b: string): boolean;
-export function lt(a: number): (b: number) => boolean;
+export function lt<T extends Ord>(__: Placeholder, b: T): (a: T) => boolean;
+export function lt<T extends Ord>(__: Placeholder): (b: T, a: T) => boolean;
+export function lt<T extends Ord>(a: T, b: T): boolean;
+export function lt<T extends Ord>(a: T): (b: T) => boolean;
 
 /**
  * Returns true if the first parameter is less than or equal to the second.
  */
-export function lte(__: Placeholder, b: number): (a: number) => boolean;
-export function lte(__: Placeholder): (b: number, a: number) => boolean;
-export function lte(a: number, b: number): boolean;
-export function lte(a: string, b: string): boolean;
-export function lte(a: number): (b: number) => boolean;
+export function lte<T extends Ord>(__: Placeholder, b: T): (a: T) => boolean;
+export function lte<T extends Ord>(__: Placeholder): (b: T, a: T) => boolean;
+export function lte<T extends Ord>(a: T, b: T): boolean;
+export function lte<T extends Ord>(a: T): (b: T) => boolean;
 
 /**
  * Returns a new list, constructed by applying the supplied function to every element of the supplied list.

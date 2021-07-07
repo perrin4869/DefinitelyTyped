@@ -7,6 +7,8 @@ import * as R from 'ramda';
   R.gt(2)(10); // => false
   R.gt('a', 'z'); // => false
   R.gt('z', 'a'); // => true
+  R.gt(new Date(Date.now() + 10))(new Date()); // => true
+  R.gt(new Date(Date.now() + 10), new Date()); // => true
 };
 
 () => {

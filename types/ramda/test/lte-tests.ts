@@ -8,6 +8,8 @@ import * as R from 'ramda';
   R.lte('a', 'z'); // => true
   R.lte('z', 'a'); // => false
   R.lte('c', 'c'); // => true
+  R.gt(new Date(Date.now() + 10))(new Date()); // => false
+  R.gt(new Date(Date.now() + 10), new Date()); // => false
 };
 
 () => {
